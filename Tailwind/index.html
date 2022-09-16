@@ -12,19 +12,29 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <link rel="stylesheet" href="./build/tailwind.css">
-    <link rel="stylesheet" href="./build/app.css">
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <link rel="stylesheet" href="./build/app.css" />
 </head>
+<!-- npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch -->
+<!-- 
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+ -->
 
 <body>
-
-    <div class="pt-12">
-        <h1 class="text-center text-black text-4xl font-semibold mb-4">Live anywhere</h1>
-        <h2 class="text-center text-gray-500 font-light text-xl mb-10">
+    <!-- <div class="pt-12">
+        <h1
+            class="text-center text-[#ffa400] text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold lg:mb-4 sm:mb-3 mb-2">
+            Live anywhere
+        </h1>
+        <h2 class="text-center text-[#198f77] text-sm sm:text-xl lg:text-xl font-normal mb-35">
             Keep calm & travel on
         </h2>
 
-        <div class="grid grid-cols-3 gap-x-8 max-w-6xl mx-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-[37px] max-w-6xl mx-auto px-[15px] ">
             <div class="">
                 <div class="h-96 mb-5">
                     <img src="https://images.unsplash.com/photo-1663006769697-25f812b0b8ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
@@ -55,32 +65,111 @@
                 <span class="block text-center text-gray-400 text-sm">6,789 properties</span>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- <label for="toggle" class="inline-block cursor-pointer toggle-switch">
+    <!-- <div class="group p-10 border border-red-50">
+        <input type="checkbox"
+            class="appearance-none checked:bg-blue-600 checked:border-transparent w-5 h-5 border border-[#910000]" />
+        <input type="text"
+            class="py-3 px-3 border border-[#ccc] outline-none rounded-xl m-3 lg:focus:border-red-500 transition-all">
+        <button class="
+            inline-block 
+            py-2 px-10 m-5 text-white 
+            bg-[#6A5AF9] 
+            lg:group-hover:bg-[#7a71c5] 
+            rounded-lg 
+            transition-all 
+            motion-safe:hover:scale-110
+            disabled:opacity-50" disabled>
+            Confirm
+        </button>
+    </div> -->
+
+    <!-- <ul class="">
+        <li class="odd:bg-red-500">Hảo la</li>
+        <li class="even:bg-blue-900">Hảo la</li>
+        <li class="odd:bg-red-500">Hảo la</li>
+        <li class="odd:bg-red-500">Hảo la</li>
+        <li class="odd:bg-red-500">Hảo la</li>
+    </ul> -->
+
+    <!-- <div before="" class="w-10 h-10 flex items-center justify-center 
+        text-[#00aefd] 
+        mx-auto 
+        my-5 border 
+        border-[#eee] 
+        rounded-xl relative 
+        before:content-[attr(before)] 
+        before:absolute 
+        before:inset-0 
+        before:rounded-xl
+        before:bg-current
+        before:opacity-25
+        ">
+        <ion-icon name="airplane-outline"></ion-icon>
+    </div> -->
+    <h1>Extending Preflight</h1>
+
+    <label for="toggle" class="inline-block cursor-pointer toggle-switch">
         <input type="checkbox" name="" id="toggle" class="darkmode-input hidden" />
-        <div class="">
-            <div class=""></div>
-        </div>
-    </label> -->
 
-    <!-- <div class="w-full">
-        <div class="">
-            <img src="https://free3dicon.com/wp-content/uploads/2021/09/compass_perspective_matte_s-2-300x300.png.webp"
-                alt="" class="mb-5 max-w-[100px] mx-auto" />
-            <h3 class="">
+        <div
+            class="w-[100px] h-[40px] border border-[#ccc] rounded-full fixed right-5 bottom-5 z-50 p-[5px] transition-colors">
+            <div class="w-7 h-7 bg-[#ccc] rounded-full transition-transform darkmode-spinner"></div>
+        </div>
+    </label>
+
+    <div class="mx-auto max-w-[1200px] grid grid-cols-4 gap-x-5">
+        <div class="px-5 py-8 rounded-lg border border-[#eee] dark:bg-[#0F0D58]">
+            <img src="https://img.freepik.com/premium-vector/cute-3d-button-icon_489510-580.jpg?w=1060" alt=""
+                class="mb-5 max-w-[100px] mx-auto" />
+
+            <h3 class="text-lg font-semibold text-center mb-3 text-[#0F0D58] dark:text-white">
                 Recommendation
             </h3>
-            <div class="">
+
+            <div class="text-sm leading-loose text-[#9191B4] font-normal dark:text-white text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
                 facilis vero quod natus molestiae autem provident nam corporis sint
                 accusamus excepturi at in, temporibus architecto ad voluptatibus
                 maxime. Tenetur!
             </div>
         </div>
-    </div> -->
 
-    <!-- <script>
+        <div class="px-5 py-8 rounded-lg border border-[#eee] dark:bg-[#0F0D58]">
+            <img src="https://img.freepik.com/free-vector/colorful-icons-collection_79603-1270.jpg?w=1060&t=st=1663325412~exp=1663326012~hmac=9df5194694a2605e788f6b2157707b5341aac08ffef2164c983ee91ea86f8ebe"
+                alt="" class="mb-5 max-w-[100px] mx-auto h-[100px]" />
+
+            <h3 class="text-lg font-semibold text-center mb-3 text-[#0F0D58] dark:text-white">
+                Recommendation
+            </h3>
+
+            <div class="text-sm leading-loose text-[#9191B4] font-normal dark:text-white text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
+                facilis vero quod natus molestiae autem provident nam corporis sint
+                accusamus excepturi at in, temporibus architecto ad voluptatibus
+                maxime. Tenetur!
+            </div>
+        </div>
+
+        <div class="px-5 py-8 rounded-lg border border-[#eee] dark:bg-[#0F0D58]">
+            <img src="https://img.freepik.com/free-vector/positive-reactions-with-empty-space-background_79603-1029.jpg?w=1060&t=st=1663325528~exp=1663326128~hmac=d282febe5d707117475a27b3cbae19f640f76ef7fb6aa3769ccebea01974aa0d"
+                alt="" class="mb-5 max-w-[100px] h-[100px] mx-auto" />
+
+            <h3 class="text-lg font-semibold text-center mb-3 text-[#0F0D58] dark:text-white">
+                Recommendation
+            </h3>
+
+            <div class="text-sm leading-loose text-[#9191B4] font-normal dark:text-white text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
+                facilis vero quod natus molestiae autem provident nam corporis sint
+                accusamus excepturi at in, temporibus architecto ad voluptatibus
+                maxime. Tenetur!
+            </div>
+        </div>
+    </div>
+
+    <script>
         const toggleSwitch = document.querySelector(
             '.toggle-switch input[type="checkbox"]'
         );
@@ -102,7 +191,8 @@
             }
         }
         toggleSwitch.addEventListener("change", switchTheme);
-    </script> -->
+    </script>
+
 </body>
 
 </html>
